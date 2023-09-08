@@ -24,14 +24,29 @@ namespace EsRientroccs
                 Console.Clear();
                 //opzioni
                 Console.WriteLine("1. Aggiusta il formato del file");
+                Console.WriteLine("2. Conta il numero dei campi del file");
                 Console.WriteLine("0. Esci dal programma");
                 scelta = int.Parse(Console.ReadLine());
                 //scelta
                 switch (scelta)
                 {
                     case 1:
-                        l.aggiusta();
-                        Console.WriteLine("File aggiustato correttamente");
+                        if (l.ContrAgg() == false)
+                        {
+                            l.aggiusta();
+                            Console.WriteLine("File aggiustato correttamente");
+                            Console.WriteLine("Clicca un tasto per continuare...");
+                            Console.ReadLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Operazione già effettuata");
+                            Console.WriteLine("Clicca un tasto per continuare...");
+                            Console.ReadLine();
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("I campi di questo file sono " + ContaCampi());
                         Console.WriteLine("Clicca un tasto per continuare...");
                         Console.ReadLine();
                         break;
