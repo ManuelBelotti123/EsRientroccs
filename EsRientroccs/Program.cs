@@ -15,10 +15,31 @@ namespace EsRientroccs
         static void Main(string[] args)
         {
             //dichiarazioni
+            int scelta = 0;
             Random rn = new Random();
             LibreriaCS l = new LibreriaCS();
+            //menu a scelta
+            do
+            {
+                Console.Clear();
+                //opzioni
+                Console.WriteLine("1. Aggiusta il formato del file");
+                Console.WriteLine("0. Esci dal programma");
+                scelta = int.Parse(Console.ReadLine());
+                //scelta
+                switch (scelta)
+                {
+                    case 1:
+                        l.aggiusta();
+                        Console.WriteLine("File aggiustato correttamente");
+                        Console.WriteLine("Clicca un tasto per continuare...");
+                        Console.ReadLine();
+                        break;
+                    case 0:
+                        break;
+                }
+            } while (scelta != 0);
 
-            l.aggiusta();
         }
     }
 }
