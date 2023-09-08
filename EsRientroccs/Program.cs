@@ -102,6 +102,41 @@ namespace EsRientroccs
                         Console.WriteLine("Clicca un tasto per continuare...");
                         Console.ReadLine();
                         break;
+                    case 5:
+                        int[] cvis = new int[3];
+                        Console.WriteLine("Digita il numero corrispondente ai campi che vuoi visualizzare:");
+                        Console.WriteLine("0. Comune");
+                        Console.WriteLine("1. Provincia");
+                        Console.WriteLine("2. Regione");
+                        Console.WriteLine("3. Tipologia");
+                        Console.WriteLine("4. Categoria(Stelle)");
+                        Console.WriteLine("5. Denominazione");
+                        Console.WriteLine("6. Indirizzo");
+                        Console.WriteLine("7. CAP");
+                        Console.WriteLine("8. Località");
+                        Console.WriteLine("9. Frazione");
+                        Console.WriteLine("10. Telefono");
+                        Console.WriteLine("11. FAX");
+                        Console.WriteLine("12. Indirizzo Posta Elettronica");
+                        Console.WriteLine("13. Sito Internet");
+                        Console.WriteLine("14. Codice esercizio");
+                        Console.WriteLine("15. Camere");
+                        Console.WriteLine("16. Posti letto standard");
+                        Console.WriteLine("17. Posti letto aggiuntivi");
+                        for (int i = 0; i < cvis.Length; i++)
+                        {
+                            Console.WriteLine("Inserisci il numero:");
+                            cvis[i] = int.Parse(Console.ReadLine());
+                        }
+                        string[] arr = l.EstrapolaCampi(cvis[0], cvis[1], cvis[2]);
+                        int j = 0;
+                        while (arr[j] != null)
+                        {
+                            Console.WriteLine(arr[j]);
+                            j++;
+                        }
+                        Console.ReadLine();
+                        break;
                     case 0:
                         break;
                 }
