@@ -46,7 +46,12 @@ namespace EsRientroccs
                         }
                         break;
                     case 2:
-                        Console.WriteLine("I campi di questo file sono " + ContaCampi());
+                        Console.WriteLine("I campi di questo file sono " + l.ContaCampi() + ".");
+                        Console.WriteLine("Clicca un tasto per continuare...");
+                        Console.ReadLine();
+                        break;
+                    case 3:
+                        Console.WriteLine("La lunghezza massima dei record presenti è " + l.LungMaxRec() + " caratteri.");
                         Console.WriteLine("Clicca un tasto per continuare...");
                         Console.ReadLine();
                         break;
@@ -54,7 +59,6 @@ namespace EsRientroccs
                         break;
                 }
             } while (scelta != 0);
-
         }
     }
 }
