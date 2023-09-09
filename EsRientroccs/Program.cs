@@ -28,6 +28,8 @@ namespace EsRientroccs
                 Console.WriteLine("2. Conta il numero dei campi del file");
                 Console.WriteLine("3. Lunghezza Massima tra i Record");
                 Console.WriteLine("4. Aggiunta di un record in coda");
+                Console.WriteLine("5. Visualizza tre campi a scelta");
+                Console.WriteLine("6. Ricerca in un campo");
                 Console.WriteLine("0. Esci dal programma");
                 scelta = int.Parse(Console.ReadLine());
                 //scelta
@@ -135,6 +137,40 @@ namespace EsRientroccs
                             Console.WriteLine(arr[j]);
                             j++;
                         }
+                        Console.WriteLine("Clicca un tasto per continuare...");
+                        Console.ReadLine();
+                        break;
+                    case 6:
+                        Console.WriteLine("Inserisci il termine che vuoi ricercare:");
+                        string ricerca = Console.ReadLine();
+                        Console.WriteLine("Digita il numero corrispondente al campo in cui vuoi ricercare:");
+                        Console.WriteLine("0. Comune");
+                        Console.WriteLine("1. Provincia");
+                        Console.WriteLine("2. Regione");
+                        Console.WriteLine("3. Tipologia");
+                        Console.WriteLine("4. Categoria(Stelle)");
+                        Console.WriteLine("5. Denominazione");
+                        Console.WriteLine("6. Indirizzo");
+                        Console.WriteLine("7. CAP");
+                        Console.WriteLine("8. Località");
+                        Console.WriteLine("9. Frazione");
+                        Console.WriteLine("10. Telefono");
+                        Console.WriteLine("11. FAX");
+                        Console.WriteLine("12. Indirizzo Posta Elettronica");
+                        Console.WriteLine("13. Sito Internet");
+                        Console.WriteLine("14. Codice esercizio");
+                        Console.WriteLine("15. Camere");
+                        Console.WriteLine("16. Posti letto standard");
+                        Console.WriteLine("17. Posti letto aggiuntivi");
+                        int campo = int.Parse(Console.ReadLine());
+                        string[] ric = l.Ricerca(campo, ricerca);
+                        j = 0;
+                        while (ric[j] != null)
+                        {
+                            Console.WriteLine(ric[j]);
+                            j++;
+                        }
+                        Console.WriteLine("Clicca un tasto per continuare...");
                         Console.ReadLine();
                         break;
                     case 0:
