@@ -25,6 +25,7 @@ namespace EsRientroccs
             {
                 Console.Clear();
                 //opzioni
+                Console.WriteLine("GESTIONE FILE CSV");
                 Console.WriteLine("1. Aggiusta il formato del file");
                 Console.WriteLine("2. Conta il numero dei campi del file");
                 Console.WriteLine("3. Lunghezza Massima tra i Record");
@@ -34,6 +35,8 @@ namespace EsRientroccs
                 Console.WriteLine("7. Modifica di un record");
                 Console.WriteLine("8. Cancellazione logica di un record");
                 Console.WriteLine("9. Recupero di un record");
+                Console.WriteLine("10. Ricompatta il file");
+                Console.WriteLine("11. Visualizza l'intero file");
                 Console.WriteLine("0. Esci dal programma");
                 scelta = int.Parse(Console.ReadLine());
                 //scelta
@@ -268,6 +271,17 @@ namespace EsRientroccs
                     case 10:
                         l.Ricompatta();
                         Console.WriteLine("Ricompattamento del file completato");
+                        Console.WriteLine("Clicca un tasto per continuare...");
+                        Console.ReadLine();
+                        break;
+                    case 11:
+                        j = 0;
+                        arr = l.Visualizza();
+                        while (arr[j] != null)
+                        {
+                            Console.WriteLine(arr[j]);
+                            j++;
+                        }
                         Console.WriteLine("Clicca un tasto per continuare...");
                         Console.ReadLine();
                         break;
