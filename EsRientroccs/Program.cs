@@ -137,7 +137,7 @@ namespace EsRientroccs
                             Console.WriteLine("Inserisci il numero:");
                             cvis[i] = int.Parse(Console.ReadLine());
                         }
-                        string[] arr = l.EstrapolaCampi(cvis[0], cvis[1], cvis[2]);
+                        string[] arr = l.EstrapolaCampi(cvis[0], cvis[1], cvis[2], true);
                         int j = 0;
                         while (arr[j] != null)
                         {
