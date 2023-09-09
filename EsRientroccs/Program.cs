@@ -265,6 +265,12 @@ namespace EsRientroccs
                         Console.WriteLine("Clicca un tasto per continuare...");
                         Console.ReadLine();
                         break;
+                    case 10:
+                        l.Ricompatta();
+                        Console.WriteLine("Ricompattamento del file completato");
+                        Console.WriteLine("Clicca un tasto per continuare...");
+                        Console.ReadLine();
+                        break;
                     case 0:
                         break;
                 }
