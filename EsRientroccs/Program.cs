@@ -33,6 +33,7 @@ namespace EsRientroccs
                 Console.WriteLine("6. Ricerca in un campo");
                 Console.WriteLine("7. Modifica di un record");
                 Console.WriteLine("8. Cancellazione logica di un record");
+                Console.WriteLine("9. Recupero di un record");
                 Console.WriteLine("0. Esci dal programma");
                 scelta = int.Parse(Console.ReadLine());
                 //scelta
@@ -209,6 +210,35 @@ namespace EsRientroccs
                     case 8:
                         bool cor = false;
                         Console.WriteLine("Inserisci il termine nel campo del record che vuoi cancellare:");
+                        ricerca = Console.ReadLine();
+                        Console.WriteLine("Digita il numero corrispondente al campo in cui vuoi ricercare:");
+                        Console.WriteLine("0. Comune");
+                        Console.WriteLine("1. Provincia");
+                        Console.WriteLine("2. Regione");
+                        Console.WriteLine("3. Tipologia");
+                        Console.WriteLine("4. Categoria(Stelle)");
+                        Console.WriteLine("5. Denominazione");
+                        Console.WriteLine("6. Indirizzo");
+                        Console.WriteLine("7. CAP");
+                        Console.WriteLine("8. Località");
+                        Console.WriteLine("9. Frazione");
+                        Console.WriteLine("10. Telefono");
+                        Console.WriteLine("11. FAX");
+                        Console.WriteLine("12. Indirizzo Posta Elettronica");
+                        Console.WriteLine("13. Sito Internet");
+                        Console.WriteLine("14. Codice esercizio");
+                        Console.WriteLine("15. Camere");
+                        Console.WriteLine("16. Posti letto standard");
+                        Console.WriteLine("17. Posti letto aggiuntivi");
+                        campo = int.Parse(Console.ReadLine());
+                        l.CancRecLogica(campo, ricerca, cor);
+                        Console.WriteLine("Operazione completata");
+                        Console.WriteLine("Clicca un tasto per continuare...");
+                        Console.ReadLine();
+                        break;
+                    case 9:
+                        cor = true;
+                        Console.WriteLine("Inserisci il termine nel campo del record che vuoi recuperare:");
                         ricerca = Console.ReadLine();
                         Console.WriteLine("Digita il numero corrispondente al campo in cui vuoi ricercare:");
                         Console.WriteLine("0. Comune");
